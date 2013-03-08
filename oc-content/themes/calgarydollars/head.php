@@ -50,6 +50,7 @@ if(osc_search_category()!=null && is_array(osc_search_category())) {
 <?php
 osc_enqueue_style('style', osc_current_web_theme_url('style.css'));
 osc_enqueue_style('tabs', osc_current_web_theme_url('tabs.css'));
+osc_enqueue_style('tabs', osc_current_web_theme_url('style.child.css'));
 
 osc_register_script('jquery-uniform', osc_current_web_theme_js_url('jquery.uniform.js'), 'jquery');
 osc_register_script('global', osc_current_web_theme_js_url('global.js'));

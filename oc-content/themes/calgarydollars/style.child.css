@@ -1,0 +1,33 @@
+
+/* Overiding styles to make the modern theme Calgary Dollars
+------------------------------------------------------------------------*/
+
+/* increase login/registration box width */
+.user_forms .inner { width:700px;}
+
+/* increase login/registration form field widths to match selector */
+.user_forms form input { width:338px; }
+
+/* increase login/registration form field widths to match selector */
+.user_forms form p { 
+	margin-bottom: 15px;
+}
+
+
+/* New Styles
+------------------------------------------------------------------------*/
+
+/* wrap around fields in a form to add top/bottom borders */
+.form-section {
+	border-top: 1px dashed #CCC;
+	border-bottom: 1px dashed #CCC;
+	padding: 20px 0 5px 0;
+	margin: 0 0 20px 0;
+}
+
+/* bottom border only */
+.form-section.btm {
+	padding-top: 0;
+	margin-top: 0;
+	border-top: 0;
+}
