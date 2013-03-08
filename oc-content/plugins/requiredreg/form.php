@@ -1,30 +1,3 @@
-<!-- uncomment those fields you want to use, uncomment next line if you want
-to use drop-down menus for location -->
-
-<!-- <label for="user_type"><?php _e('User type', 'modern') ; ?></label>
-<?php UserForm::is_company_select() ; ?>
-<br /> -->
-
-<!-- <label for="phoneMobile"><?php _e('Cell phone', 'modern') ; ?></label>
-<?php UserForm::mobile_text() ; ?>
-<br /> -->
-
-<!--<label for="country"><?php _e('Country', 'modern') ; ?> *</label>
-<?php UserForm::country_select(osc_get_countries()) ; ?>
-<br />-->
-
-<!--<label for="region"><?php _e('Region', 'modern') ; ?> *</label>
-<?php UserForm::region_select(array()) ; ?>
-<br />-->
-
-<!--<label for="city_area"><?php _e('City area', 'modern') ; ?></label>
-<?php UserForm::city_area_text() ; ?>
-<br />-->
-
-<!-- <label for="webSite"><?php _e('Website', 'modern') ; ?></label>
-<?php UserForm::website_text() ; ?>
-<br /> -->
-
 <div class="form-section">
 
 <p><strong>The following information will be used to help us deliver your free 20 Calgary Dollars</strong></p>
@@ -32,8 +5,7 @@ to use drop-down menus for location -->
 <?php UserForm::location_javascript(); ?>
 
 <label for="city"><?php _e('City', 'modern') ; ?></label>
-<?php UserForm::city_select(osc_get_cities()) ; ?>
-<br />
+<?php UserForm::city_select(array()) ; ?>
 <br />
 
 <label for="address"><?php _e('Address', 'modern') ; ?></label>
@@ -61,16 +33,3 @@ Calgary Dollars as a complementary currency.</p>
 </p>Calgary Dollars accepts no responsibility for the availability of goods and/or services.</p>
 
 </div>
-
-<script>
-    $(document).ready(function(){
-
-        $("#s_phone_land").rules("add", {required: true, messages: { required: "phone number is required" }});
-        $("#city").rules("add", {required: true, messages: { required: "City is required" }});
-       	/*$("#s_phone_mobile").rules("add", {required: true, messages: { required: "Mobile phone is required" }});*/
-        /*$("#countryId").rules("add", {required: true, messages: { required: "Country is required" }});*/
-        /*$("#region").rules("add", {required: true, messages: { required: "Region is required" }});*/
-        /*$("#cityArea").rules("add", {required: true, messages: { required: "City area is required" }});*/
-        /* $("#s_website").rules("add", {required: true, messages: { required: "Website is required" }});*/
-    }); 
-</Script>

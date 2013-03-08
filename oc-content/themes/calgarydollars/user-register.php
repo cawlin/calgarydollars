@@ -30,6 +30,17 @@
     </head>
     <body>
         <?php UserForm::js_validation(); ?>
+		
+		<!-- custom fields validation -->
+		<script>
+		    $(document).ready(function(){
+		        $("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
+		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
+				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "Name: this field is required" }});
+				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
+		    }); 
+		</Script>
+
         <?php osc_current_web_theme_path('header.php'); ?>
         <div class="content user_forms">
             <div class="inner">
