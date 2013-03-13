@@ -36,7 +36,7 @@
 		    $(document).ready(function(){
 		        $("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
 		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
-				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "Name: this field is required" }});
+				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "First and Last Name: this field is required" }});
 				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
 		    }); 
 		</Script>
@@ -51,7 +51,7 @@
                     <input type="hidden" name="action" value="register_post" />
 
                     <fieldset>
-                        <label for="name"><?php _e('Name', 'modern'); ?></label> <?php UserForm::name_text(); ?><br />
+                        <label for="name"><?php _e('First and Last Name', 'modern'); ?></label> <?php UserForm::name_text(); ?><br />
                         <label for="email"><?php _e('E-mail', 'modern'); ?></label> <?php UserForm::email_text(); ?><br />
                         <label for="password"><?php _e('Password', 'modern'); ?></label> <?php UserForm::password_text(); ?><br />
                         <label for="password"><?php _e('Re-type password', 'modern'); ?></label> <?php UserForm::check_password_text(); ?><br />

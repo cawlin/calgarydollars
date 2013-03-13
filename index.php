@@ -25,6 +25,8 @@
     }
 
     require_once ABS_PATH . 'oc-load.php';
+	statichomepage();
+
 
     if( CLI ) {
         $cli_params = getopt('p:t:');

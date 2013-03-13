@@ -23,64 +23,45 @@
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="<?php echo str_replace('_', '-', osc_current_user_locale()); ?>">
     <head>
         <?php osc_current_web_theme_path('head.php'); ?>
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
     </head>
     <body>
         <?php osc_current_web_theme_path('header.php'); ?>
-        <div class="form_publish">
-            <?php osc_current_web_theme_path('inc.search.php'); ?>
-        </div>
-		
-        <div class="content home">
-	
+        <div id="frontpage">
+            <h1><?php echo osc_static_page_title(); ?></h1>
+            <div><?php echo osc_static_page_text(); ?></div>
+			
+			<div id="splash">
+				<h2>Support Our Local Economy</h2>
+				<div class="searchwrap">
+		            <?php osc_current_web_theme_path('inc.search.php'); ?>
+		        </div>
+			</div>
+			
+			<p class="large">This is the place to come to when wanting to buy and sell using Calgary Dollars.  Once you have registered, you can enter classified ads as listings for goods or services for sale, to earn Calgary Dollars (C$) or a percentage of regular Canadian dollars, to keep supporting our local economy! </p>
+			
+			<table class="columns">
+				<tr>
+					<td class="first">
+						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/more.jpg" width="300" height="200" alt=""></p>
+						<h3>Become a Calgary Dollars Member</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</td>
+					<td>
+						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/market.jpg" width="300" height="200" alt=""></p>
+						<h3>Come to a Calgary Dollars Market</h3>
+						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</td>
+					<td class="last">
+						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/accepted.jpg" width="300" height="200" alt="Accepted"></p>
+						<h3>Learn More About Calgary Dollars</h3>
+					<p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse officia deserunt mollit anim id est laborum.</p>
+					</td>
+				</tr>
+			</table>		
 
-	
-            <div id="main">
-	
-                <?php
-                    $total_categories   = osc_count_categories();
-                    $col1_max_cat       = ceil($total_categories/3);
-                    $col2_max_cat       = ceil(($total_categories-$col1_max_cat)/2);
-                    $col3_max_cat       = $total_categories-($col1_max_cat+$col2_max_cat);
-                ?>
-                <div class="categories <?php echo 'c' . $total_categories; ?>">
-                    <?php osc_goto_first_category(); ?>
-                    <?php
-                        $i      = 1;
-                        $x      = 1;
-                        $col    = 1;
-                        if(osc_count_categories () > 0) {
-                            echo '<div class="col c1">';
-                        }
-                    ?>
-                    <?php while ( osc_has_categories() ) { ?>
-                        <div class="category">
-                            <h1><strong><a class="category cat_<?php echo osc_category_id(); ?>" href="<?php echo osc_search_category_url(); ?>"><?php echo osc_category_name(); ?></a> <span>(<?php echo osc_category_total_items(); ?>)</span></strong></h1>
-                            <?php if ( osc_count_subcategories() > 0 ) { ?>
-                                <ul>
-                                    <?php while ( osc_has_subcategories() ) { ?>
-                                        <li><a class="category cat_<?php echo osc_category_id(); ?>" href="<?php echo osc_search_category_url(); ?>"><?php echo osc_category_name(); ?></a> <span>(<?php echo osc_category_total_items(); ?>)</span></li>
-                                    <?php } ?>
-                                </ul>
-                            <?php } ?>
-                        </div>
-                        <?php
-                            if (($col==1 && $i==$col1_max_cat) || ($col==2 && $i==$col2_max_cat) || ($col==3 && $i==$col3_max_cat)) {
-                                $i = 1;
-                                $col++;
-                                echo '</div>';
-                                if($x < $total_categories) {
-                                    echo '<div class="col c'.$col.'">';
-                                }
-                            } else {
-                                $i++;
-                            }
-                            $x++;
-                        ?>
-                    <?php } ?>
-               </div>
-               <div class="latest_ads">
+			<div class="latest_ads">
                     <h1><strong><?php _e('Latest Listings', 'modern'); ?></strong></h1>
                     <?php if( osc_count_latest_items() == 0) { ?>
                         <p class="empty"><?php _e('No Latest Listings', 'modern'); ?></p>
@@ -117,14 +98,11 @@
                         <?php } ?>
                     <?php View::newInstance()->_erase('items'); } ?>
                 </div>
-            </div>
-            <div id="sidebar">
-				<br><p><img src="http://placehold.it/240x240&text=Market+Promo"></p>
-				<p><img src="http://placehold.it/240x100&text=advertisment"></p>
-				<p><img src="http://placehold.it/240x100&text=advertisment"></p>
-				
-            </div>
+
+
         </div>
+
         <?php osc_current_web_theme_path('footer.php'); ?>
+
     </body>
 </html>

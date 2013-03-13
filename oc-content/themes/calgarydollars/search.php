@@ -243,12 +243,6 @@
                                 <input type="text" name="sPattern" id="query" value="<?php echo osc_esc_html( osc_search_pattern() ); ?>" />
                                 <div id="search-example"></div>
                             </div>
-                            <h3><strong><?php _e('Location', 'modern'); ?></strong></h3>
-                            <div class="row one_input">
-                                <h6><?php _e('City', 'modern'); ?></h6>
-                                <input type="text" id="sCity" name="sCity" value="<?php echo osc_esc_html( osc_search_city() ); ?>" />
-                                <input type="hidden" id="sRegion" name="sRegion" value="" />
-                            </div>
                         </fieldset>
 
                         <fieldset class="box show_only">

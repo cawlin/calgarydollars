@@ -2,6 +2,9 @@
 /* Overiding styles to make the modern theme Calgary Dollars
 ------------------------------------------------------------------------*/
 
+/* change form random width of 970px; */
+.container { width: 960px; }
+
 /* increase login/registration box width */
 .user_forms .inner { width:700px;}
 
@@ -31,3 +34,128 @@
 	margin-top: 0;
 	border-top: 0;
 }
+
+p {
+	margin-bottom: 10px;
+}
+
+#header {
+	border-bottom: 0;
+	padding-bottom: 5px;
+}
+
+#top-nav {
+	margin-top: 10px;
+	padding: 15px 10px;
+	width: 938px;
+	background: #333;
+	border: 1px solid #666;
+}
+
+#top-nav a {
+	font-size: 14px;
+	color: white;
+	margin-right: 4px;
+	padding: 0px 8px 0 4px;
+	text-decoration: none;
+/*	background: #069;*/
+/*	-webkit-border-radius: 5px;*/
+	border-right: 1px solid #999;
+}
+
+#top-nav a:hover {
+	text-decoration: underline;
+}
+
+/* Front Page (homepage - frontpage.php)
+------------------------------------------------------------------------*/
+
+#frontpage {
+	
+}
+
+#splash {
+	height: 400px;
+	background: #e9f5f9 url(images/frontpage/calgary.jpg);
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#splash h2 {
+	padding-top: 40px;
+	margin-bottom: 220px;
+	text-align: center;
+	font-size: 42px;
+	top: 0;
+	left: auto;
+	color: #333;
+	letter-spacing: -2px;
+}
+
+#splash .searchwrap {
+	background: rgba(256,256,256,0.8);
+	text-align: center;
+	padding: 15px 0;
+	width: 900px;
+	margin: 0 auto;
+	border: 1px solid #333;
+}
+
+#splash .search fieldset {
+	padding: 0;
+}
+
+#splash form {
+	height: auto;
+}
+
+#splash form .selector {
+	text-align: left;
+}
+
+#splash #search-example {
+	display: none;
+}
+
+#splash .button {
+	background:#ec4901 url(images/button_link_bg.gif) repeat-x top; 
+	border:1px solid #c54f00;
+	color: white;
+}
+
+#frontpage .columns {
+	margin-bottom: 20px;
+}
+
+#frontpage .columns td {width: 300px;}
+#frontpage .columns .first {padding-right: 30px;}
+#frontpage .columns .last {padding-left: 30px;}
+
+#frontpage .columns h3 {
+	font-size: 16px;
+	font-weight: normal;
+	background: #333;
+	color: white;
+	padding: 20px 10px;
+	margin-bottom: 10px;
+	line-height: 0;
+}
+
+#frontpage .large {
+	font-size: 14px;
+	margin-bottom: 10px;
+	background: #e9f5f9;
+	border: 2px solid #bed7df;
+	padding: 10px;
+	color: #333;
+}
+
+
+#frontpage .latest_ads h2 {
+	border-top: 1px solid #ddd;
+	font-size: 16px;
+	padding-bottom: 10px;
+	font-weight: normal;
+	padding: 20px 10px;
+}
+
