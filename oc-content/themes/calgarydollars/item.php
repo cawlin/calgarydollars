@@ -118,16 +118,9 @@
                     </p>
                     <?php osc_run_hook('location'); ?>
                 </div>
+
                 <!-- plugins -->
-                <div id="useful_info">
-                    <h2><?php _e('Useful information', 'modern'); ?></h2>
-                    <ul>
-                        <li><?php _e('Avoid scams by acting locally or paying with PayPal', 'modern'); ?></li>
-                        <li><?php _e('Never pay with Western Union, Moneygram or other anonymous payment services', 'modern'); ?></li>
-                        <li><?php _e('Don\'t buy or sell outside of your country. Don\'t accept cashier cheques from outside your country', 'modern'); ?></li>
-                        <li><?php _e('This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer "buyer protection" or "seller certification"', 'modern'); ?></li>
-                    </ul>
-                </div>
+
                 <?php if( osc_comments_enabled() ) { ?>
                     <?php if( osc_reg_user_post_comments () && osc_is_web_user_logged_in() || !osc_reg_user_post_comments() ) { ?>
                     <div id="comments">

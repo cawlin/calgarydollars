@@ -38,7 +38,7 @@
         {
             if( in_array($this->getLocation(), array('item', 'page', 'search', 'login', 'register', 'user', 'contact')) ) {
                 $l = array(
-                    'url'   => osc_base_url(),
+                    'url'   => '/index.php?page=',
                     'title' => osc_page_title()
                 );
                 $this->addLevel($l);

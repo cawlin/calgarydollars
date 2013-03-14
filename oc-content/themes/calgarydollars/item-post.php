@@ -114,7 +114,9 @@
                         <label for="price"><?php _e('Price', 'modern'); ?></label>
                         <?php ItemForm::price_input_text(); ?>
                         <?php ItemForm::currency_select(); ?>
+					<?php ItemForm::plugin_post_item(); ?>
                     </div>
+
                     <?php } ?>
                     <?php if( osc_images_enabled_at_items() ) { ?>
                     <div class="box photos">
@@ -130,28 +132,41 @@
 
                     <div class="box location">
                         <h2><?php _e('Listing Location', 'modern'); ?></h2>
+
+						<div class="row" style="display: none;">
+							<label for="countryId">Country</label>
+							<div class="selector" id="uniform-countryId">
+								<span>Canada</span>
+								<select name="countryId" id="countryId" style="opacity: 0; " class="valid">
+									<option value="CA">Canada</option>
+								</select>
+							</div>
+						</div>
+						
+						<div class="row" style="display: none;">
+							<label for="regionId">Region</label>
+							<input id="region" type="text" name="region" value="Alberta" maxlength="" autocomplete="off" class="ui-autocomplete-input valid" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+							<input id="regionId" type="hidden" name="regionId" value="781162">
+						</div>
+
+						<div class="row" style="display: none;">
+							<label for="city">City</label>
+							<input id="city" type="text" name="city" value="Calgary" maxlength="" autocomplete="off" class="valid">
+							<input id="cityId" type="hidden" name="cityId" value="115236">               
+						</div>
+						
                         <div class="row">
-                            <label for="countryId"><?php _e('Country', 'modern'); ?></label>
-                            <?php ItemForm::country_select(osc_get_countries(), osc_user()); ?>
-                        </div>
-                        <div class="row">
-                            <label for="regionId"><?php _e('Region', 'modern'); ?></label>
-                            <?php ItemForm::region_text(osc_user()); ?>
-                        </div>
-                        <div class="row">
-                            <label for="city"><?php _e('City', 'modern'); ?></label>
-                            <?php ItemForm::city_text(osc_user()); ?>
-                        </div>
-                        <div class="row">
-                            <label for="city"><?php _e('City Area', 'modern'); ?></label>
+                            <label for="city"><?php _e('Calgary City Area', 'modern'); ?></label>
                             <?php ItemForm::city_area_text(osc_user()); ?>
                         </div>
+
                         <div class="row">
-                            <label for="address"><?php _e('Address', 'modern'); ?></label>
+                            <label for="address"><?php _e('Address (optional)', 'modern'); ?></label>
                             <?php ItemForm::address_text(osc_user()); ?>
                         </div>
                     </div>
-                    <!-- seller info -->
+                   
+ 					<!-- seller info -->
                     <?php if(!osc_is_web_user_logged_in() ) { ?>
                     <div class="box seller_info">
                         <h2><?php _e("Seller's information", 'modern'); ?></h2>
@@ -171,7 +186,6 @@
                         </div>
                     </div>
                     <?php }; ?>
-                    <?php ItemForm::plugin_post_item(); ?>
                     <?php if( osc_recaptcha_items_enabled() ) {?>
                     <div class="box">
                         <div class="row">
