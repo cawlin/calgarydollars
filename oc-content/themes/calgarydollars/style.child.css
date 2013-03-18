@@ -1,3 +1,19 @@
+/*------------------------------------------------------------------------
+
+	Author: Colin Sproule - 2013 DSYIP Intern
+	Date: March 2013
+	
+	This stylesheet is used to override and customize the OSClass
+	"modern" theme. Minimum changes were created in hopes that the
+	this theme will hold up over time.
+	
+	How this theme has developed over time can be seen in the
+	public repository on github:
+	
+	https://github.com/cawlin/calgarydollars
+
+------------------------------------------------------------------------*/
+
 
 /* Overiding styles to make the modern theme Calgary Dollars
 ------------------------------------------------------------------------*/
@@ -12,9 +28,7 @@
 .user_forms form input { width:338px; }
 
 /* increase login/registration form field widths to match selector */
-.user_forms form p { 
-	margin-bottom: 15px;
-}
+.user_forms form p { margin-bottom: 15px;}
 
 
 /* Misc Styles
@@ -200,6 +214,54 @@ p {margin-bottom: 10px;}
 	width: 960px;
 }
 
+/* Registration Form (user-register.php)
+------------------------------------------------------------------------*/
+
+.user_forms h1 {
+	font-size: 20px;
+}
+
+
+#join-steps {
+	padding-left: 20px;
+	list-style: decimal;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.register-box {
+	background:#FFF; 
+	border:1px solid #DDD; 
+	clear:both; 
+	padding:13px; 
+	-moz-border-radius:10px; 
+	border-radius:10px;
+	margin-bottom: 10px ;
+}
+
+.register-box h2 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+
+#search-head .main {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 10px;
+}
+
+#search-head .main .button {
+	background: #ccc;
+	border: 1px solid #999;
+}
+
+#search-head .main .button span {
+	padding-bottom: 7px;
+	padding-top: 7px;
+}
+
 /* Item Posting
 ------------------------------------------------------------------------*/
 
@@ -276,54 +338,6 @@ p {margin-bottom: 10px;}
 
 .item #contact {
 	margin-top: 0;
-}
-
-/* Registration Form (user-register.php)
-------------------------------------------------------------------------*/
-
-.user_forms h1 {
-	font-size: 20px;
-}
-
-
-#join-steps {
-	padding-left: 20px;
-	list-style: decimal;
-	font-size: 16px;
-	line-height: 1.5;
-}
-
-.register-box {
-	background:#FFF; 
-	border:1px solid #DDD; 
-	clear:both; 
-	padding:13px; 
-	-moz-border-radius:10px; 
-	border-radius:10px;
-	margin-bottom: 10px ;
-}
-
-.register-box h2 {
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-
-
-#search-head .main {
-	background: #eee;
-	border: 1px solid #ddd;
-	border-top: 0;
-	padding: 10px;
-}
-
-#search-head .main .button {
-	background: #ccc;
-	border: 1px solid #999;
-}
-
-#search-head .main .button span {
-	padding-bottom: 7px;
-	padding-top: 7px;
 }
 
 
