@@ -28,14 +28,8 @@
     </head>
     <body>
         <?php osc_current_web_theme_path('header.php'); ?>
-        <div class="form_publish">
-            <?php osc_current_web_theme_path('inc.search.php'); ?>
-        </div>
 		
         <div class="content home">
-	
-
-	
             <div id="main">
 	
                 <?php

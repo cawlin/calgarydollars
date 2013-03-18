@@ -74,7 +74,7 @@
         </ul>
         <?php if( osc_users_enabled() || ( !osc_users_enabled() && !osc_reg_user_post() )) { ?>
             <div class="form_publish">
-                <strong class="publish_button"><a href="<?php echo osc_item_post_url_in_category(); ?>"><?php _e("Publish your ad for free", 'modern');?></a></strong>
+                <strong class="publish_button"><a href="<?php echo osc_item_post_url_in_category(); ?>"><?php _e("Publish an ad for free", 'modern');?></a></strong>
             </div>
         <?php } ?>
         <div class="empty"></div>
@@ -84,12 +84,16 @@
 <div class="clear"></div>
 
 <div id="top-nav">
-	<a href="/index.php?page=" class="first">Browse Listings</a>
+	<a href="/index.php?page=" class="first">Browse & Search Listings</a>
 	<a href="/calgary-dollars-business-directory">Calgary Dollars Business Directory</a>
 	<?php while( osc_has_static_pages() ) { ?>
 		<a href="<?php echo osc_static_page_url(); ?>"><?php echo osc_static_page_title(); ?></a>
 	<?php } ?>
 	<?php osc_reset_static_pages(); ?>
+</div>
+
+<div id="search-head" class="form_publish">
+    <?php osc_current_web_theme_path('inc.search.php'); ?>
 </div>
 
 <!-- /header -->

@@ -102,22 +102,22 @@
                     <input type="hidden" name="id" value="<?php echo osc_item_id();?>" />
                     <input type="hidden" name="secret" value="<?php echo osc_item_secret();?>" />
                         <div class="box general_info">
-                            <h2><?php _e('General Information', 'modern'); ?></h2>
-                            <div class="row">
+                            <div class="box">
                                 <label><?php _e('Category', 'modern'); ?> *</label>
                                 <?php ItemForm::category_select(null, null, __('Select a category', 'modern')); ?>
                             </div>
                             <div class="row">
                                 <?php ItemForm::multilanguage_title_description(osc_get_locales()); ?>
                             </div>
-                            <?php if( osc_price_enabled_at_items() ) { ?>
-                            <div class="row price">
-                                <label><?php _e('Price', 'modern'); ?></label>
-                                <?php ItemForm::price_input_text(); ?>
-                                <?php ItemForm::currency_select(); ?>
-                            </div>
-                            <?php } ?>
                         </div>
+	                   <?php if( osc_price_enabled_at_items() ) { ?>
+		                    <div class="box price">
+		                        <label for="price"><?php _e('Price', 'modern'); ?></label>
+		                        <?php ItemForm::price_input_text(); ?>
+		                        <?php ItemForm::currency_select(); ?>
+								<?php ItemForm::plugin_edit_item(); ?>
+		                    </div>
+                           <?php } ?>
                         <?php if( osc_images_enabled_at_items() ) { ?>
                         <div class="box photos">
                             <h2><?php _e('Photos', 'modern'); ?></h2>
@@ -134,29 +134,41 @@
                         <?php } ?>
 
                         <div class="box location">
-                            <h2><?php _e('Location', 'modern'); ?></h2>
-                            <div class="row">
-                                <label><?php _e('Country', 'modern'); ?></label>
-                                <?php ItemForm::country_select(); ?>
-                            </div>
-                            <div class="row">
-                                <label><?php _e('Region', 'modern'); ?></label>
-                                <?php ItemForm::region_text(); ?>
-                            </div>
-                            <div class="row">
-                                <label><?php _e('City', 'modern'); ?></label>
-                                <?php ItemForm::city_text(); ?>
-                            </div>
-                            <div class="row">
-                                <label><?php _e('City area', 'modern'); ?></label>
-                                <?php ItemForm::city_area_text(); ?>
-                            </div>
-                            <div class="row">
-                                <label><?php _e('Address', 'modern'); ?></label>
-                                <?php ItemForm::address_text(); ?>
-                            </div>
+                            <h2><?php _e('Listing Location', 'modern'); ?></h2>
+
+							<div class="row" style="display: none;">
+								<label for="countryId">Country</label>
+								<div class="selector" id="uniform-countryId">
+									<span>Canada</span>
+									<select name="countryId" id="countryId" style="opacity: 0; " class="valid">
+										<option value="CA">Canada</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row" style="display: none;">
+								<label for="regionId">Region</label>
+								<input id="region" type="text" name="region" value="Alberta" maxlength="" autocomplete="off" class="ui-autocomplete-input valid" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+								<input id="regionId" type="hidden" name="regionId" value="781162">
+							</div>
+
+							<div class="row" style="display: none;">
+								<label for="city">City</label>
+								<input id="city" type="text" name="city" value="Calgary" maxlength="" autocomplete="off" class="valid">
+								<input id="cityId" type="hidden" name="cityId" value="115236">               
+							</div>
+
+	                        <div class="row">
+	                            <label for="city"><?php _e('Calgary City Area', 'modern'); ?></label>
+	                            <?php ItemForm::city_area_text(osc_user()); ?>
+	                        </div>
+
+	                        <div class="row">
+	                            <label for="address"><?php _e('Address (optional)', 'modern'); ?></label>
+	                            <?php ItemForm::address_text(osc_user()); ?>
+	                        </div>
                         </div>
-                        <?php ItemForm::plugin_edit_item(); ?>
+
                         <?php if( osc_recaptcha_items_enabled() ) {?>
                         <div class="box">
                             <div class="row">

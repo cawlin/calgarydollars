@@ -70,8 +70,17 @@
                          <a href="<?php echo osc_item_url(); ?>"><?php echo osc_highlight( strip_tags( osc_item_title() ) ); ?></a>
                      </h3>
                      <p>
-                         <strong><?php if( osc_price_enabled_at_items() ) { echo osc_item_formated_price(); ?> - <?php } echo osc_item_city(); ?> (<?php echo osc_item_region(); ?>) - <?php echo osc_format_date(osc_item_pub_date()); ?></strong>
-                     </p>
+                         <strong>$ <?php if( osc_price_enabled_at_items() ) { echo osc_item_formated_price(); ?> &#8594; <?php } ?>
+									<?php if( osc_count_item_meta() >= 1 ) { ?>
+										<?php while ( osc_has_item_meta() ) { ?>
+											<?php if(osc_item_meta_value()!='') { ?>
+													<?php echo osc_item_meta_value(); ?>
+											<?php } ?>
+										<?php } ?>
+									<?php } ?>
+						</strong> -
+						<em><?php echo osc_format_date(osc_item_pub_date()); ?></em>
+					</p>
                      <p><?php echo osc_highlight( strip_tags( osc_item_description() ) ); ?></p>
                  </td>
              </tr>

@@ -30,21 +30,30 @@
     </head>
     <body>
         <?php UserForm::js_validation(); ?>
-		
-		<!-- custom fields validation -->
-		<script>
-		    $(document).ready(function(){
-		        $("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
-		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
-				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "First and Last Name: this field is required" }});
-				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
-		    }); 
-		</Script>
-
+				
         <?php osc_current_web_theme_path('header.php'); ?>
+		
         <div class="content user_forms">
             <div class="inner">
-                <h1><?php _e('Register an account for free', 'modern'); ?></h1>
+                <h1><?php _e('Register an Online Listings Account for Free', 'modern'); ?></h1>
+				
+				<div class="register-box">
+
+					<ol id="join-steps">
+						<li>Watch the overview video below</li>
+						<li>Fill out the form below</li>
+						<li>Activate your account via email</li>
+						<li>Post a Listing on this site</li>
+						<li>Fill out an <a href="http://www.surveymonkey.com/s/calgarydollars2012intake">Intake Survey</a></li>
+						<li><strong>Recieve your free 20 Calgary Dollars</strong></li>
+					</ol>
+				</div>
+				
+				<div class="register-box">
+				<h2>Overview Video</h2>
+				<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/JpqaXgSv7dk&hl=en_US&feature=player_embedded&version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.youtube.com/v/JpqaXgSv7dk&hl=en_US&feature=player_embedded&version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></embed></object>
+				</div>
+
                 <ul id="error_list"></ul>
                 <form name="register" id="register" action="<?php echo osc_base_url(true); ?>" method="post" >
                     <input type="hidden" name="page" value="register" />
@@ -66,5 +75,15 @@
             </div>
         </div>
         <?php osc_current_web_theme_path('footer.php'); ?>
+
+		<!-- custom fields validation -->
+		<script>
+		    $(document).ready(function(){
+		        $("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
+		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
+				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "First and Last Name: this field is required" }});
+				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
+		    }); 
+		</Script>
     </body>
 </html>

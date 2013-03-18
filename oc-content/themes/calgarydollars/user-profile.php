@@ -71,24 +71,11 @@
                             <?php UserForm::name_text(osc_user()); ?>
                         </div>
                         <div class="row">
-                            <label for="email"><?php _e('Username', 'modern'); ?></label>
-                            <span class="update">
-                                <?php echo osc_user_username(); ?><br />
-                                <?php if(osc_user_username()==osc_user_id()) { ?>
-                                    <a href="<?php echo osc_change_user_username_url(); ?>"><?php _e('Modify username', 'modern'); ?></a>
-                                <?php }; ?>
-                            </span>
-                        </div>
-                        <div class="row">
                             <label for="email"><?php _e('E-mail', 'modern'); ?></label>
                             <span class="update">
                                 <?php echo osc_user_email(); ?><br />
                                 <a href="<?php echo osc_change_user_email_url(); ?>"><?php _e('Modify e-mail', 'modern'); ?></a> <a href="<?php echo osc_change_user_password_url(); ?>" ><?php _e('Modify password', 'modern'); ?></a>
                             </span>
-                        </div>
-                        <div class="row">
-                            <label for="user_type"><?php _e('User type', 'modern'); ?></label>
-                            <?php UserForm::is_company_select(osc_user()); ?>
                         </div>
                         <div class="row">
                             <label for="phoneMobile"><?php _e('Cell phone', 'modern'); ?></label>
@@ -98,18 +85,7 @@
                             <label for="phoneLand"><?php _e('Phone', 'modern'); ?></label>
                             <?php UserForm::phone_land_text(osc_user()); ?>
                         </div>
-                        <div class="row">
-                            <label for="country"><?php _e('Country', 'modern'); ?> *</label>
-                            <?php UserForm::country_select(osc_get_countries(), osc_user()); ?>
-                        </div>
-                        <div class="row">
-                            <label for="region"><?php _e('Region', 'modern'); ?> *</label>
-                            <?php UserForm::region_select(osc_get_regions(), osc_user()); ?>
-                        </div>
-                        <div class="row">
-                            <label for="city"><?php _e('City', 'modern'); ?> *</label>
-                            <?php UserForm::city_select(osc_get_cities(), osc_user()); ?>
-                        </div>
+    
                         <div class="row">
                             <label for="city_area"><?php _e('City area', 'modern'); ?></label>
                             <?php UserForm::city_area_text(osc_user()); ?>
@@ -123,6 +99,7 @@
                             <?php UserForm::website_text(osc_user()); ?>
                         </div>
                         <div class="row">
+							<p>About yourself:</p>
                             <?php UserForm::multilanguage_info($locales, osc_user()); ?>
                         </div>
                         <div class="row">

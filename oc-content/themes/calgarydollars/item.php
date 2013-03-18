@@ -55,7 +55,7 @@
         <div class="content item">
             <div id="item_head">
                 <div class="inner">
-                    <h1><?php if( osc_price_enabled_at_items() ) { ?><span class="price"><?php echo osc_item_formated_price(); ?></span> <?php } ?><strong><?php echo osc_item_title() . ' ' . osc_item_city(); ?></strong></h1>
+                    <h1><?php echo osc_item_title() . ' ' . osc_item_city(); ?></h1>
                     <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
                         <p id="edit_item_view">
                             <strong>
@@ -76,50 +76,66 @@
                     <?php }; ?>
                 </div>
             </div>
-            <div id="main">
-                <div id="type_dates">
-                    <strong><?php echo osc_item_category(); ?></strong>
-                    <em class="publish"><?php if ( osc_item_pub_date() != '' ) echo __('Published date', 'modern') . ': ' . osc_format_date( osc_item_pub_date() ); ?></em>
-                    <em class="update"><?php if ( osc_item_mod_date() != '' ) echo __('Modified date', 'modern') . ': ' . osc_format_date( osc_item_mod_date() ); ?></em>
-                </div>
-                <ul id="item_location">
-                    <?php if ( osc_item_country() != "" ) { ?><li><?php _e("Country", 'modern'); ?>: <strong><?php echo osc_item_country(); ?></strong></li><?php } ?>
-                    <?php if ( osc_item_region() != "" ) { ?><li><?php _e("Region", 'modern'); ?>: <strong><?php echo osc_item_region(); ?></strong></li><?php } ?>
-                    <?php if ( osc_item_city() != "" ) { ?><li><?php _e("City", 'modern'); ?>: <strong><?php echo osc_item_city(); ?></strong></li><?php } ?>
-                    <?php if ( osc_item_city_area() != "" ) { ?><li><?php _e("City area", 'modern'); ?>: <strong><?php echo osc_item_city_area(); ?></strong></li><?php } ?>
-                    <?php if ( osc_item_address() != "" ) { ?><li><?php _e("Address", 'modern'); ?>: <strong><?php echo osc_item_address(); ?></strong></li><?php } ?>
-                </ul>
-                <div id="description">
-                    <p><?php echo osc_item_description(); ?></p>
-                    <div id="custom_fields">
-                        <?php if( osc_count_item_meta() >= 1 ) { ?>
-                            <br />
-                            <div class="meta_list">
-                                <?php while ( osc_has_item_meta() ) { ?>
-                                    <?php if(osc_item_meta_value()!='') { ?>
-                                        <div class="meta">
-                                            <strong><?php echo osc_item_meta_name(); ?>:</strong> <?php echo osc_item_meta_value(); ?>
-                                        </div>
-                                    <?php } ?>
-                                <?php } ?>
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <?php osc_run_hook('item_detail', osc_item() ); ?>
-                    <p class="contact_button">
-                        <?php if( !osc_item_is_expired () ) { ?>
-                        <?php if( !( ( osc_logged_user_id() == osc_item_user_id() ) && osc_logged_user_id() != 0 ) ) { ?>
-                            <?php     if(osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) { ?>
-                                <strong><a href="#contact"><?php _e('Contact seller', 'modern'); ?></a></strong>
-                            <?php     } ?>
-                        <?php     } ?>
-                        <?php } ?>
-                        <strong class="share"><a href="<?php echo osc_item_send_friend_url(); ?>" rel="nofollow"><?php _e('Share', 'modern'); ?></a></strong>
-                    </p>
-                    <?php osc_run_hook('location'); ?>
-                </div>
 
-                <!-- plugins -->
+			<div class="clear"></div>
+
+			<p id="item-price-container">
+			<?php if( osc_price_enabled_at_items() ) { ?>
+				<span class="price">$ <?php echo osc_item_formated_price(); ?> &#8594; </span>
+			<?php } ?>
+			<?php if( osc_count_item_meta() >= 1 ) { ?>
+				<?php while ( osc_has_item_meta() ) { ?>
+					<?php if(osc_item_meta_value()!='') { ?>
+						<span class="calgary-dollars">
+							<?php echo osc_item_meta_value(); ?>
+						</span>
+					<?php } ?>
+				<?php } ?>
+			<?php } ?>
+			</p>
+
+            <div id="main">
+                <div id="description">
+					<h2>Description</h2>
+                    <p><?php echo osc_item_description(); ?></p>
+					
+                    <?php osc_run_hook('item_detail', osc_item() ); ?>
+
+					<div id="type_dates">
+	                    <em class="publish"><?php if ( osc_item_pub_date() != '' ) echo __('Published', 'modern') . ': ' . osc_format_date( osc_item_pub_date() ); ?></em>
+	                    <em class="update"><?php if ( osc_item_mod_date() != '' ) echo __('Last Modified', 'modern') . ': ' . osc_format_date( osc_item_mod_date() ); ?></em>
+	                </div>
+
+					<?php if( osc_images_enabled_at_items() ) { ?>
+	                    <?php if( osc_count_item_resources() > 0 ) { ?>
+	                    <div id="photos">
+							<h2><strong>Photos</strong></h2>
+	                        <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
+	                        <a href="<?php echo osc_resource_url(); ?>" rel="image_group" title="<?php _e('Image', 'modern'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
+	                            <img src="<?php echo osc_resource_url(); ?>" width="150" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" class=" large-item-photo"/>
+	                        </a>
+	                        <?php } ?>
+	                    </div>
+	                    <?php } ?>
+	                <?php } ?>
+					
+					<div class="clear"></div>
+					
+					<div id="item-plugin-container">
+						<h2>Location</h1>
+						<ul id="item_location">
+							<?php if ( osc_item_city_area() != "" ) { ?>
+								<li><?php _e("City area", 'modern'); ?>: <strong><?php echo osc_item_city_area(); ?></strong></li>
+							<?php } ?>
+							<?php if ( osc_item_address() != "" ) { ?>
+								<li><?php _e("Address", 'modern'); ?>: <strong><?php echo osc_item_address(); ?></strong></li>
+							<?php } else { 	?>
+								<li>Address: <strong>Not Listed Contact Publisher</strong></li>
+							<?php } ?>
+						</ul>
+                    	<?php osc_run_hook('location'); ?>
+					</div>
+                </div>
 
                 <?php if( osc_comments_enabled() ) { ?>
                     <?php if( osc_reg_user_post_comments () && osc_is_web_user_logged_in() || !osc_reg_user_post_comments() ) { ?>
@@ -168,23 +184,8 @@
                 <?php } ?>
             </div>
             <div id="sidebar">
-                <?php if( osc_images_enabled_at_items() ) { ?>
-                    <?php if( osc_count_item_resources() > 0 ) { ?>
-                    <div id="photos">
-                        <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
-                        <a href="<?php echo osc_resource_url(); ?>" rel="image_group" title="<?php _e('Image', 'modern'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>">
-                            <?php if( $i == 0 ) { ?>
-                            <img src="<?php echo osc_resource_url(); ?>" width="315" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
-                            <?php } else { ?>
-                                <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" />
-                            <?php } ?>
-                        </a>
-                        <?php } ?>
-                    </div>
-                    <?php } ?>
-                <?php } ?>
                 <div id="contact">
-                    <h2><?php _e("Contact publisher", 'modern'); ?></h2>
+                    <h2><?php _e("Contact Seller", 'modern'); ?></h2>
                     <?php if( osc_item_is_expired () ) { ?>
                         <p>
                             <?php _e("The listing is expired. You can't contact the publisher.", 'modern'); ?>
@@ -209,9 +210,6 @@
                         <?php } ?>
                         <?php if( osc_item_show_email() ) { ?>
                             <p class="email"><?php _e('E-mail', 'modern'); ?>: <?php echo osc_item_contact_email(); ?></p>
-                        <?php } ?>
-                        <?php if ( osc_user_phone() != '' ) { ?>
-                            <p class="phone"><?php _e("Tel", 'modern'); ?>.: <?php echo osc_user_phone(); ?></p>
                         <?php } ?>
                         <ul id="error_list"></ul>
                         <?php ContactForm::js_validation(); ?>
@@ -246,6 +244,7 @@
                             </fieldset>
                         </form>
                     <?php } ?>
+						
                 </div>
             </div>
         </div>

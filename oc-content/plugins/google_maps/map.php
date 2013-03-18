@@ -22,7 +22,7 @@
      
         var myOptions = {
             zoom: 13,
-            center: new google.maps.LatLng(37.4419, -122.1419),
+            center: new google.maps.LatLng(51.0544, -114.0669),
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             size: new google.maps.Size(480,240)
         }

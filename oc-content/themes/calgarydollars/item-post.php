@@ -100,8 +100,7 @@
                 <input type="hidden" name="action" value="item_add_post" />
                 <input type="hidden" name="page" value="item" />
                     <div class="box general_info">
-                        <h2><?php _e('General Information', 'modern'); ?></h2>
-                        <div class="row">
+                        <div class="box">
                             <label for="catId"><?php _e('Category', 'modern'); ?> *</label>
                             <?php ItemForm::category_select(null, null, __('Select a category', 'modern')); ?>
                         </div>

@@ -65,8 +65,6 @@
                 <h2><?php _e('Profile', 'modern'); ?></h2>
                     <ul id="user_data">
                         <li><?php _e('Full name', 'modern'); ?>: <?php echo osc_user_name(); ?></li>
-                        <li><?php _e('Address', 'modern'); ?>: <?php echo $address; ?></li>
-                        <li><?php _e('Location', 'modern'); ?>: <?php echo $location; ?></li>
                         <li><?php _e('Website', 'modern'); ?>: <?php echo osc_user_website(); ?></li>
                         <li><?php _e('User Description', 'modern'); ?>: <?php echo osc_user_info(); ?></li>
                     </ul>
@@ -110,7 +108,7 @@
                 <?php if(osc_logged_user_id()!=  osc_user_id()) { ?>
                 <?php     if(osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) { ?>
                 <div id="contact">
-                    <h2><?php _e("Contact publisher", 'modern'); ?></h2>
+                    <h2><?php _e("Contact Seller", 'modern'); ?></h2>
                     <ul id="error_list"></ul>
                     <?php ContactForm::js_validation(); ?>
                     <form action="<?php echo osc_base_url(true); ?>" method="post" name="contact_form" id="contact_form">

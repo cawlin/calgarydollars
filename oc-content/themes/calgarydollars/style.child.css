@@ -6,7 +6,7 @@
 .container { width: 960px; }
 
 /* increase login/registration box width */
-.user_forms .inner { width:700px;}
+.user_forms .inner { width:938px;}
 
 /* increase login/registration form field widths to match selector */
 .user_forms form input { width:338px; }
@@ -17,7 +17,7 @@
 }
 
 
-/* New Styles
+/* Misc Styles
 ------------------------------------------------------------------------*/
 
 /* wrap around fields in a form to add top/bottom borders */
@@ -35,14 +35,45 @@
 	border-top: 0;
 }
 
-p {
-	margin-bottom: 10px;
+p {margin-bottom: 10px;}
+
+.flashmessage,
+.flashmessage {
+	width: 956px;
 }
+
+.flashmessage-ok {
+  color: #468847;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+
+/* Header
+------------------------------------------------------------------------*/
+
 
 #header {
 	border-bottom: 0;
 	padding-bottom: 5px;
 }
+
+#header #user_menu ul li.first  {
+	border: 0;
+	padding: 0;
+}
+
+#header .publish_button {
+	margin-right: 0;
+}
+
+#header #user_menu {
+	right: 0;
+	padding-top: 15px;
+}
+
+
+/* Navigation
+------------------------------------------------------------------------*/
 
 #top-nav {
 	margin-top: 10px;
@@ -53,14 +84,19 @@ p {
 }
 
 #top-nav a {
-	font-size: 14px;
+	font-size: 13px;
 	color: white;
-	margin-right: 4px;
-	padding: 0px 8px 0 4px;
+	margin-left: 4px;
+	padding: 0px 4px 0 10px;
 	text-decoration: none;
 /*	background: #069;*/
 /*	-webkit-border-radius: 5px;*/
-	border-right: 1px solid #999;
+	border-left: 1px solid #999;
+}
+
+#top-nav a.first {
+	border-left: none;
+	padding-left: 0;
 }
 
 #top-nav a:hover {
@@ -69,10 +105,6 @@ p {
 
 /* Front Page (homepage - frontpage.php)
 ------------------------------------------------------------------------*/
-
-#frontpage {
-	
-}
 
 #splash {
 	height: 400px;
@@ -101,6 +133,11 @@ p {
 	border: 1px solid #333;
 }
 
+#splash .search {
+	border: 0;
+	margin: 0;
+}
+
 #splash .search fieldset {
 	padding: 0;
 }
@@ -124,7 +161,7 @@ p {
 }
 
 #frontpage .columns {
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 }
 
 #frontpage .columns td {width: 300px;}
@@ -159,6 +196,10 @@ p {
 	padding: 20px 10px;
 }
 
+#frontpage #main {
+	width: 960px;
+}
+
 /* Item Posting
 ------------------------------------------------------------------------*/
 
@@ -173,4 +214,116 @@ p {
 .general_info .title {
 	margin-bottom: 10px;
 }
+
+/* Single Ad Display (item.php)
+------------------------------------------------------------------------*/
+
+#item_head {
+	background: #e9f5f9;
+	border: 1px solid #bed7df;
+	border-bottom-style: dashed;
+	width: 958px;
+}
+
+#item-price-container {
+	font-size: 16px;
+	padding: 10px 10px;
+	border: 1px solid #bed7df;
+	border-top: 0;
+	background: #dceff5;
+}
+
+#item-plugin-container {
+	margin-top: 15px;
+}
+
+.item #photos {
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.item #photos img {
+	border: 0;
+	margin-right: 5px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	background: #efefef;
+}
+
+.item #photos img:hover {
+	background: #069;
+}
+
+.item #description {
+	padding-top: 10px;
+}
+
+.item #type_dates {
+	border-bottom: 0;
+	padding: 0;
+	margin-bottom: 10px;
+	font-size: 10px;
+}
+
+.item #item_location {
+	margin: 0;
+}
+
+.item #item_location li {
+	border: 0;
+	width: auto;
+}
+
+.item #contact {
+	margin-top: 0;
+}
+
+/* Registration Form (user-register.php)
+------------------------------------------------------------------------*/
+
+.user_forms h1 {
+	font-size: 20px;
+}
+
+
+#join-steps {
+	padding-left: 20px;
+	list-style: decimal;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+.register-box {
+	background:#FFF; 
+	border:1px solid #DDD; 
+	clear:both; 
+	padding:13px; 
+	-moz-border-radius:10px; 
+	border-radius:10px;
+	margin-bottom: 10px ;
+}
+
+.register-box h2 {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+
+#search-head .main {
+	background: #eee;
+	border: 1px solid #ddd;
+	border-top: 0;
+	padding: 10px;
+}
+
+#search-head .main .button {
+	background: #ccc;
+	border: 1px solid #999;
+}
+
+#search-head .main .button span {
+	padding-bottom: 7px;
+	padding-top: 7px;
+}
+
 
