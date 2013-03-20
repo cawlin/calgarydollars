@@ -1,13 +1,12 @@
 <?php
 /*
-Plugin Name: Required Fields at Registration
-Plugin URI: http://www.osclass.org/
-Description: Require more fields at registration process
-Version: 1.0.1
-Author: OSClass
-Author URI: http://www.osclass.org/
+Plugin Name: Calgary Dollars Required Fields at Registration
+Plugin URI: http://arusha.org
+Description: Require more fields at registration process - custom Calgary Dollars Plugin forked from public plugin
+Version: 1.0
+Author: Colin Sproule
+Author URI: http://arusha.org
 Short Name: requiredreg
-Plugin update URI: required-fields
 */
 
 

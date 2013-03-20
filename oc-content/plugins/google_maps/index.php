@@ -1,12 +1,11 @@
 <?php
 /*
-Plugin Name: Google Maps
-Plugin URI: http://www.osclass.org/
-Description: This plugin shows a Google Map on the location space of every item.
+Plugin Name: Google Maps - Customized for Calgary Dollars
+Plugin URI: http://arusha.org
+Description: This plugin shows a Google Map on the location space of every item - customized to work specifically for Calgary area
 Version: 2.1.4
-Author: Osclass & kingsult
-Author URI: http://www.osclass.org/
-Plugin update URI: http://www.osclass.org/files/plugins/google_maps/update.php
+Author: Colin Sproule
+Author URI: http://arusha.org
 */
 
     function google_maps_location() {

@@ -1,11 +1,11 @@
 <?php
 /*
-Plugin Name: Static Home Page
-Plugin URI: http://www.osclass.org/
-Description: Static Home Page that replaces the dynamic web page on your os-class system.
+Plugin Name: Static Calgary Dollars Home Page
+Plugin URI: http://arusha.org
+Description: Static custom homepage (frontpage.php) forked from public plugin
 Version: 1.5.1
-Author: SiteTurbo@gmail.com
-Author URI: http://www.osclass.org/
+Author: Colin
+Author URI: http://arusha.org
 Short Name: statichomepage
 */
 
