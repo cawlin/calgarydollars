@@ -39,25 +39,25 @@
 		            <?php osc_current_web_theme_path('inc.search.php'); ?>
 		        </div>
 			</div>
-			
+						
 			<p class="large">This is the place to come to when wanting to buy and sell using Calgary Dollars.  Once you have registered, you can enter classified ads as listings for goods or services for sale, to earn Calgary Dollars (C$) or a percentage of regular Canadian dollars, to keep supporting our local economy! </p>
 			
 			<table class="columns">
 				<tr>
 					<td class="first">
-						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/more.jpg" width="300" height="200" alt=""></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/more.jpg" width="300" height="200" alt=""></p>
 						<h3>Become a Calgary Dollars Member</h3>
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-						<p><a href="/user/register">Join now and we'll send you 20 free calgary dollars!</a></p>
+						<p><a href="<?php echo osc_base_url(); ?>/user/register">Join now and we'll send you 20 free calgary dollars!</a></p>
 					</td>
 					<td>
-						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/market.jpg" width="300" height="200" alt=""></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/market.jpg" width="300" height="200" alt=""></p>
 						<h3>Come to a Calgary Dollars Market</h3>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						<p><a href="#" class="button">Find out when the next Calgary Dollars Market is</a></p>
 					</td>
 					<td class="last">
-						<p><img src="/oc-content/themes/calgarydollars/images/frontpage/accepted.jpg" width="300" height="200" alt="Accepted"></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/accepted.jpg" width="300" height="200" alt="Accepted"></p>
 						<h3>Learn More About Calgary Dollars</h3>
 					<p>laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse officia deserunt mollit anim id est laborum.</p>
 					<p><a href="#">See Calgary Dollars Works</a></p>
