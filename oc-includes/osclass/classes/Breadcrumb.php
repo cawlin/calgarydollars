@@ -38,8 +38,8 @@
         {
             if( in_array($this->getLocation(), array('item', 'page', 'search', 'login', 'register', 'user', 'contact')) ) {
                 $l = array(
-                    'url'   => '/index.php?page=',
-                    'title' => 'Browse & Search Listings'
+                    'url'   => 'index.php?page=',
+                    'title' => 'Browse Listings'
                 );
                 $this->addLevel($l);
             }
