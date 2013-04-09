@@ -132,28 +132,19 @@
                     <div class="box location">
                         <h2><?php _e('Listing Location', 'modern'); ?></h2>
 
-						<div class="row" style="display: none;">
-							<label for="countryId">Country</label>
-							<div class="selector" id="uniform-countryId">
-								<span>Canada</span>
-								<select name="countryId" id="countryId" style="opacity: 0; " class="valid">
-									<option value="CA">Canada</option>
-								</select>
-							</div>
-						</div>
-						
-						<div class="row" style="display: none;">
-							<label for="regionId">Region</label>
-							<input id="region" type="text" name="region" value="Alberta" maxlength="" autocomplete="off" class="ui-autocomplete-input valid" role="textbox" aria-autocomplete="list" aria-haspopup="true">
-							<input id="regionId" type="hidden" name="regionId" value="781162">
-						</div>
+                        <div class="row">
+                            <label for="countryId"><?php _e('Country', 'modern'); ?></label>
+                            <?php ItemForm::country_select(osc_get_countries(), osc_user()); ?>
+                        </div>
+                        <div class="row">
+                            <label for="regionId"><?php _e('Region', 'modern'); ?></label>
+                            <?php ItemForm::region_text(osc_user()); ?>
+                        </div>
+                        <div class="row">
+                            <label for="city"><?php _e('City', 'modern'); ?></label>
+                            <?php ItemForm::city_text(osc_user()); ?>
+                        </div>
 
-						<div class="row" style="display: none;">
-							<label for="city">City</label>
-							<input id="city" type="text" name="city" value="Calgary" maxlength="" autocomplete="off" class="valid">
-							<input id="cityId" type="hidden" name="cityId" value="115236">               
-						</div>
-						
                         <div class="row">
                             <label for="city"><?php _e('Calgary City Area', 'modern'); ?></label>
                             <?php ItemForm::city_area_text(osc_user()); ?>
