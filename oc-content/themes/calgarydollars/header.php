@@ -84,7 +84,7 @@
 <div class="clear"></div>
 
 <div id="top-nav">
-	<a href="<?php echo osc_base_url(); ?>/index.php?page=" class="first">Browse Listings</a>
+	<a href="<?php echo osc_base_url(); ?>index.php?page=" class="first">Browse Listings</a>
 	<a href="<?php echo osc_base_url(); ?>/calgary-dollars-business-directory">Calgary Dollars Business Directory</a>
 	<?php while( osc_has_static_pages() ) { ?>
 		<a href="<?php echo osc_static_page_url(); ?>"><?php echo osc_static_page_title(); ?></a>
