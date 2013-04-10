@@ -23,7 +23,15 @@
     $sQuery = osc_esc_js(osc_get_preference('keyword_placeholder', 'modern_theme'));
 ?>
 <!-- footer -->
+
 <div id="footer">
+	
+		<div id="footer-ads">
+			<p><small>Sponsored Advertisments</small></p>
+			<img src="http://placehold.it/470x100&text=advertisment" class="first">
+			<img src="http://placehold.it/470x100&text=advertisment">
+		</div>
+	
     <div class="inner">
         <a href="<?php echo osc_contact_url(); ?>"><?php _e('Contact', 'modern'); ?></a>
         <?php osc_reset_static_pages(); ?>

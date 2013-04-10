@@ -512,4 +512,21 @@ p {margin-bottom: 10px;}
   line-height: 20px !important;
 }
 
+/* Footer
+------------------------------------------------------------------------*/
+
+#footer-ads {
+	padding: 10px 0;
+}
+
+#footer-ads img.first {
+	margin-right: 15px;
+}
+
+#footer-ads small {
+	font-size: 11px;
+	color: #999;
+}
+
+
 
