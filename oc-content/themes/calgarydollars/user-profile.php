@@ -78,21 +78,28 @@
                             </span>
                         </div>
                         <div class="row">
-                            <label for="phoneMobile"><?php _e('Cell phone', 'modern'); ?></label>
-                            <?php UserForm::mobile_text(osc_user()); ?>
-                        </div>
-                        <div class="row">
                             <label for="phoneLand"><?php _e('Phone', 'modern'); ?></label>
                             <?php UserForm::phone_land_text(osc_user()); ?>
                         </div>
-    
+						<div class="row">
+                            <label for="country"><?php _e('Country', 'modern'); ?> *</label>
+                            <?php UserForm::country_select(osc_get_countries(), osc_user()); ?>
+                        </div>
                         <div class="row">
-                            <label for="city_area"><?php _e('City area', 'modern'); ?></label>
-                            <?php UserForm::city_area_text(osc_user()); ?>
+                            <label for="region"><?php _e('Region', 'modern'); ?> *</label>
+                            <?php UserForm::region_select(osc_get_regions(), osc_user()); ?>
+                        </div>
+                        <div class="row">
+                            <label for="city"><?php _e('City', 'modern'); ?> *</label>
+                            <?php UserForm::city_select(osc_get_cities(), osc_user()); ?>
                         </div>
                         <div class="row">
                             <label for="address"><?php _e('Address', 'modern'); ?></label>
                             <?php UserForm::address_text(osc_user()); ?>
+                        </div>
+                        <div class="row">
+                            <label for="city_area"><?php _e('Zip Code', 'modern'); ?></label>
+                            <?php UserForm::city_area_text(osc_user()); ?>
                         </div>
                         <div class="row">
                             <label for="webSite"><?php _e('Website', 'modern'); ?></label>
