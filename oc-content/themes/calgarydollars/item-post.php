@@ -138,16 +138,11 @@
                         </div>
                         <div class="row">
                             <label for="regionId"><?php _e('Region', 'modern'); ?></label>
-                            <?php ItemForm::region_text(osc_user()); ?>
+							<?php ItemForm::region_select(osc_get_regions(), osc_user()); ?>
                         </div>
                         <div class="row">
-                            <label for="city"><?php _e('City', 'modern'); ?></label>
-                            <?php ItemForm::city_text(osc_user()); ?>
-                        </div>
-
-                        <div class="row">
-                            <label for="city"><?php _e('Calgary City Area', 'modern'); ?></label>
-                            <?php ItemForm::city_area_text(osc_user()); ?>
+                            <label for="cityId"><?php _e('City', 'modern'); ?></label>
+							<?php ItemForm::city_select(osc_get_cities(), osc_user()); ?>
                         </div>
 
                         <div class="row">

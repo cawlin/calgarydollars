@@ -1,16 +1,26 @@
 <div class="form-section">
 
-<p><strong>The following information will be used to help us deliver your free 20 Calgary Dollars</strong></p>
+<p><strong>The following information will be used to deliver your free 20 C$ (Calgary Dollars)</strong></p>
 
 <?php UserForm::location_javascript(); ?>
 
+<label for="country"><?php _e('Country', 'modern') ; ?></label>
+<?php UserForm::country_select(osc_get_countries()) ; ?>
+<br /><br />
+
+<label for="regionId"><?php _e('Province', 'modern') ; ?></label>
+<?php UserForm::region_select(osc_get_regions()) ; ?>
+<br /><br />
+
 <label for="city"><?php _e('City', 'modern') ; ?></label>
-<?php UserForm::city_select(array()) ; ?>
-<br />
+<?php UserForm::city_select(osc_get_cities()) ; ?>
+<br /><br />
 
 <label for="address"><?php _e('Address', 'modern') ; ?></label>
 <?php UserForm::address_text() ; ?>
-<br />
+
+<label for="city_area"><?php _e('Zip Code', 'modern') ; ?></label>
+<?php UserForm::city_area_text() ; ?>
 
 <label for="phoneLand"><?php _e('Phone Number', 'modern') ; ?></label>
 <?php UserForm::phone_land_text() ; ?>

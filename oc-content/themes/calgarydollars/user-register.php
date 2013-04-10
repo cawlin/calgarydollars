@@ -34,10 +34,13 @@
 		<!-- custom fields validation -->
 		<script>
 		    $(document).ready(function(){
-		        $("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
-		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
 				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "First and Last Name: this field is required" }});
+				$("#countryId").rules("add", {required: true, messages: { required: "Country: this field is required" }});
+		        $("#regionId").rules("add", {required: true, messages: { required: "Province: this field is required" }});
+		        $("#cityId").rules("add", {required: true, messages: { required: "City: This field is required" }});
 				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
+				$("#cityArea").rules("add", {required: true, minlength: 5, messages: { required: "Zip Code: this field is required" }});
+				$("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
 		    }); 
 		</script>
 				
@@ -45,18 +48,28 @@
 		
         <div class="content user_forms">
             <div class="inner">
-                <h1><?php _e('Register an Online Listings Account for Free', 'modern'); ?></h1>
+                <h1><?php _e('Register for a Free Online Listings Account', 'modern'); ?></h1>
 				
-				<div class="register-box">
-
-					<ol id="join-steps">
+				<div id="join-steps" class="register-box">
+					
+					<p><strong>First:</strong> Create an account below</p>
+					
+					<ul>
 						<li>Watch the overview video below</li>
 						<li>Fill out the form below</li>
-						<li>Activate your account via email</li>
+						<li>Activate your account via email</li>						
+					</ul>
+					
+					<p><strong>Next:</strong> Follow the email instructions and we'll send you 20 C$ (Calgary Dollars) for free!</p>
+					
+					<ul>
 						<li>Post a Listing on this site</li>
 						<li>Fill out an <a href="http://www.surveymonkey.com/s/calgarydollars2012intake">Intake Survey</a></li>
-						<li><strong>Recieve your free 20 Calgary Dollars</strong></li>
-					</ol>
+						<li><strong>We'll mail you 20 C$</strong></li>
+					</ul>
+					
+					<p><em>Don't worry we'll remind you of the steps to earn 20 C$ in an email after you fill out the form below</em></p>
+					
 				</div>
 				
 				<div class="register-box">
