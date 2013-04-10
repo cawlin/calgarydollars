@@ -124,13 +124,15 @@
 					<div id="item-plugin-container">
 						<h2>Location</h1>
 						<ul id="item_location">
-							<?php if ( osc_item_city_area() != "" ) { ?>
-								<li><?php _e("City area", 'modern'); ?>: <strong><?php echo osc_item_city_area(); ?></strong></li>
-							<?php } ?>
-							<?php if ( osc_item_address() != "" ) { ?>
+							<li>
+								<?php if ( osc_item_country() != "" ) { ?><?php echo osc_item_country(); ?>,<?php } ?>
+		                    	<?php if ( osc_item_region() != "" ) { ?><?php echo osc_item_region(); ?>,<?php } ?>
+		                    	<?php if ( osc_item_city() != "" ) { ?><?php echo osc_item_city(); ?>,<?php } ?>
+								<?php if ( osc_item_address() != "" ) { ?>
+							</li>
 								<li><?php _e("Address", 'modern'); ?>: <strong><?php echo osc_item_address(); ?></strong></li>
 							<?php } else { 	?>
-								<li>Address: <strong>Not Listed Contact Publisher</strong></li>
+								<li>Address: <strong>Specific Address Not Listed Contact Publisher</strong></li>
 							<?php } ?>
 						</ul>
                     	<?php osc_run_hook('location'); ?>
