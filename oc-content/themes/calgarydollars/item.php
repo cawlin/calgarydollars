@@ -127,7 +127,7 @@
 							<li>
 								<?php if ( osc_item_country() != "" ) { ?><?php echo osc_item_country(); ?>,<?php } ?>
 		                    	<?php if ( osc_item_region() != "" ) { ?><?php echo osc_item_region(); ?>,<?php } ?>
-		                    	<?php if ( osc_item_city() != "" ) { ?><?php echo osc_item_city(); ?>,<?php } ?>
+		                    	<?php if ( osc_item_city() != "" ) { ?><?php echo osc_item_city(); ?><?php } ?>
 								<?php if ( osc_item_address() != "" ) { ?>
 							</li>
 								<li><?php _e("Address", 'modern'); ?>: <strong><?php echo osc_item_address(); ?></strong></li>
