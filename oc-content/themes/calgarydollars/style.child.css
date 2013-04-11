@@ -512,6 +512,18 @@ p {margin-bottom: 10px;}
   line-height: 20px !important;
 }
 
+
+/* Category Description
+------------------------------------------------------------------------*/
+
+#category-description {
+	padding: 10px 10px 0 10px;
+	background: #e9f5f9;
+	border: 2px solid #bed7df;
+	margin: -18px 0 10px 0;
+}
+
+
 /* Footer
 ------------------------------------------------------------------------*/
 

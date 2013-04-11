@@ -184,6 +184,13 @@
         <?php osc_current_web_theme_path('header.php'); ?>
         <div class="content list">
             <div id="main">
+	               				
+				<?php if ( osc_category_description() != "" ) { ?>
+					<div id="category-description">
+						<p><?php echo osc_category_description($locale = "") ?></p>
+					</div>
+				<?php } ?>
+			
                 <div class="ad_list">
                     <div id="list_head">
                         <div class="inner">
