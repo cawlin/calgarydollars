@@ -121,21 +121,13 @@ p {margin-bottom: 10px;}
 ------------------------------------------------------------------------*/
 
 #splash {
-	height: 400px;
-	background: #e9f5f9 url(images/frontpage/calgary.jpg);
+	height: 86px;
+	background: #e9f5f9 url(images/frontpage/search-splash.jpg);
 	margin-bottom: 10px;
 	position: relative;
-}
-
-#splash h2 {
-	padding-top: 40px;
-	margin-bottom: 220px;
-	text-align: center;
-	font-size: 42px;
-	top: 0;
-	left: auto;
-	color: #333;
-	letter-spacing: -2px;
+	padding-top: 315px;
+	border: 1px solid #ddd;
+	border-top: 0;
 }
 
 #splash .searchwrap {
@@ -197,7 +189,7 @@ p {margin-bottom: 10px;}
 	margin-bottom: 10px;
 	background: #e9f5f9;
 	border: 2px solid #bed7df;
-	padding: 10px;
+	padding: 10px 10px 0 10px;
 	color: #333;
 }
 
@@ -221,19 +213,40 @@ p {margin-bottom: 10px;}
 	font-size: 20px;
 }
 
+#register-boxes {
+	margin-bottom: 10px;
+}
 
+#register-boxes td {
+	width: 467px;
+	border:1px solid #DDD; 
+}
+
+#register-boxes td {
+	padding: 10px;
+	background: white;
+}
+
+#register-boxes .spacer {
+	width: 10px;
+	padding: 0;
+	background: none;
+	border: 0;
+}
+
+#register-boxes ol {
+	padding-left: 20px;
+	list-style: decimal;
+	margin-bottom: 5px;
+}
 	
 #join-steps ul {
 	padding-left: 20px;
 	list-style: disc;
-	font-size: 16px;
-	line-height: 1.5;
 }
 
 #join-steps p {
 	margin-top: 10px;
-	font-size: 16px;
-	line-height: 1.5;
 }
 
 .register-box {

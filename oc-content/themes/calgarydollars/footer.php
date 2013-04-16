@@ -28,8 +28,8 @@
 	
 		<div id="footer-ads">
 			<p><small>Sponsored Advertisments</small></p>
-			<img src="http://placehold.it/470x100&text=advertisment" class="first">
-			<img src="http://placehold.it/470x100&text=advertisment">
+			<img src="<?php echo osc_current_web_theme_url(); ?>/advertisments/footer-ad-1.jpg" width="470px" height="100px" class="first">
+			<img src="<?php echo osc_current_web_theme_url(); ?>/advertisments/footer-ad-2.jpg" width="470px" height="100px">
 		</div>
 	
     <div class="inner">

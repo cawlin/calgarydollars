@@ -85,7 +85,7 @@
                                 <?php while ( osc_has_latest_items() ) { ?>
                                  <tr class="<?php echo $class. (osc_item_is_premium()?" premium":""); ?>">
                                         <?php if( osc_images_enabled_at_items() ) { ?>
-                                         <td class="photo">
+                                        <td class="photo">
                                             <?php if( osc_count_item_resources() ) { ?>
                                                 <a href="<?php echo osc_item_url(); ?>">
                                                     <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" height="56" title="<?php echo osc_item_title(); ?>" alt="<?php echo osc_item_title(); ?>" />
@@ -113,10 +113,10 @@
                 </div>
             </div>
             <div id="sidebar">
-				<br><p><img src="http://placehold.it/240x240&text=Market+Promo"></p>
-				<p><img src="http://placehold.it/240x100&text=advertisment"></p>
-				<p><img src="http://placehold.it/240x100&text=advertisment"></p>
-				
+				<br>
+				<p><img src="<?php echo osc_current_web_theme_url(); ?>advertisments/sidebar-ad-large.jpg" width="240" height="240"></p>
+				<p><img src="<?php echo osc_current_web_theme_url(); ?>/advertisments/sidebar-ad-1.jpg" width="240" height="100" alt=""></p>
+				<p><img src="<?php echo osc_current_web_theme_url(); ?>/advertisments/sidebar-ad-2.jpg" width="240" height="100" alt=""></p>
             </div>
         </div>
         <?php osc_current_web_theme_path('footer.php'); ?>

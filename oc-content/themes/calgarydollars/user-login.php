@@ -31,6 +31,9 @@
         <div class="content user_forms">
             <div class="inner">
                 <h1><?php _e('Access to your account', 'modern'); ?></h1>
+				
+				<p class="register-box">To post an ad for free, simply log into your account by submitting the information below.  Don’t have an account?  It’s simple. Just <a href="<?php echo osc_register_account_url(); ?>"><?php _e("Register", 'modern'); ?></a>  to get your free account, then post an ad listing to get started.</p>
+
                 <form action="<?php echo osc_base_url(true); ?>" method="post" >
                     <input type="hidden" name="page" value="login" />
                     <input type="hidden" name="action" value="login_post" />

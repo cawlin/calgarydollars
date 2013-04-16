@@ -49,6 +49,35 @@
         <div class="content user_forms">
             <div class="inner">
                 <h1><?php _e('Register for a Free Online Listings Account', 'modern'); ?></h1>
+
+				<table id="register-boxes">
+					<tr>
+						<td class="first">
+							<p><strong>Why Join Calgary Dollars?</strong></p>
+							<p>5 Reasons to Join Calgary Dollars:</p>
+							<ol>
+								<li>Make Money. Sell your goods and services in a new network for new possibilities.</li>
+								<li>Keep Your Money Local. Keep your money in Calgary, and with your neighbourhood businesses.</li>
+								<li>Support Your Community. When you exchange C$ in your community, you’re building fiscal and social capital in the place you live.  </li>
+								<li>Help the Environment. Reduce carbon emissions by trading locally. </li>
+								<li>Network. Join an expanding network of people and businesses wanting to make a difference.</li>
+							</ol>
+						</td>
+						<td class="spacer"></td>
+						<td>
+							<p><strong>How Should I Post a Listing?</strong></p>
+							<p>We believe everyone in Calgary has something to offer their community.  From a high end professional service, or budding new business, to an old hockey stick, or lending a helping hand in shovelling snow or yard work, you’ve got something uniquely you that is of value and worth to offer.</p>
+							<ol>
+								<li>Decide on what you will offer in services or goods.  It can be anything!  A business, a skill, flea market items, 
+								high quality organics, vegetables from your garden, etc.</li>
+								<li>Determine the amount or % you will accept in C$. For example, accept 50% C$ - 
+								so half CND half C$.  Or, 75% C$ - so three quarters in C$, and one quarter in CND.</li>
+							</ol>
+							<p>Attend monthly Markets to network make transactions and spend your C$.</p>
+							<p>Increase your purchasing power, improve your quality of life and help to strengthen our community.</p>
+						</td>
+					</tr>
+				</table>
 				
 				<div id="join-steps" class="register-box">
 					
