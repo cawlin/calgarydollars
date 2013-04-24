@@ -47,20 +47,20 @@
 			<table class="columns">
 				<tr>
 					<td class="first">
-						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/more.jpg" width="300" height="200" alt=""></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/column-1.jpg" width="300" height="200" alt=""></p>
 						<h3>Become a Calgary Dollars Member</h3>
 						<p>Interested in engaging in the local economy?  Start by joining Calgary Dollars (C$).  By joining, you can start listing your goods or services for sale via our Listings Site, AND we’ll give you free C$20 just for signing up.  Three simple steps:  register, place an ad, and do the survey. It takes around 10 minutes.</p>
 						<p><a href="<?php echo osc_base_url(); ?>/user/register">To join Calgary Dollars, click here!</a></p>
 					</td>
 					<td>
-						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/market.jpg" width="300" height="200" alt=""></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/column-2.jpg" width="300" height="200" alt="Come out to a Calgary Dollars Market"></p>
 						<h3>Come to a Calgary Dollars Market</h3>
 						<p>Calgary Dollar Markets are a great way to start exchanging in C$.  Come browse our vendors’ goods and services, or get a free vendor table to sell your own.  Either way, there’ll be a great meal to eat, and community to meet.</p>
 						<p>Every 2nd Monday of every month in the Bow Cliff Seniors at the Spruce Cliff Community Centre.  All ages welcome!</p>
-						<p><a href="#" class="button">For more information about our Markets, directions and dates, click here!</a></p>
+						<p><a href="http://calgarydollars.ca/markets.html" class="button">For more information about our Markets, directions and dates, click here!</a></p>
 					</td>
 					<td class="last">
-						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/accepted.jpg" width="300" height="200" alt="Accepted"></p>
+						<p><img src="<?php echo osc_current_web_theme_url(); ?>/images/frontpage/column-3.jpg" width="300" height="200" alt="Calgary's Complimentary Currency - Calgary Dollars"></p>
 						<h3>Learn More About Calgary Dollars</h3>
 					<p>What are Calgary Dollars?  Why post an ad listing with us?  How does this site work?  Why join?  Find answers to this, costs, and how to get the most out of what you need.</p>
 					<p><a href="<?php echo osc_base_url(); ?>/how_this_works">Learn more about Calgary Dollars, and how it works, click here.</a></p>

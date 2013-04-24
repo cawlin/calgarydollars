@@ -53,15 +53,23 @@
 				<table id="register-boxes">
 					<tr>
 						<td class="first">
-							<p><strong>Why Join Calgary Dollars?</strong></p>
-							<p>5 Reasons to Join Calgary Dollars:</p>
-							<ol>
-								<li>Make Money. Sell your goods and services in a new network for new possibilities.</li>
-								<li>Keep Your Money Local. Keep your money in Calgary, and with your neighbourhood businesses.</li>
-								<li>Support Your Community. When you exchange C$ in your community, you’re building fiscal and social capital in the place you live.  </li>
-								<li>Help the Environment. Reduce carbon emissions by trading locally. </li>
-								<li>Network. Join an expanding network of people and businesses wanting to make a difference.</li>
-							</ol>
+							<p><strong>First: Create an account below</strong></p>
+
+							<ul>
+								<li>Watch the overview video below</li>
+								<li>Fill out the form below</li>
+								<li>Activate your account via email</li>						
+							</ul>
+							<br>
+							<p><strong>Next: Follow the email instructions and we'll send you 20 C$ (Calgary Dollars) for free!</strong></p>
+							<br>
+							<ul>
+								<li>Post a Listing on this site</li>
+								<li>Fill out an <a href="http://www.surveymonkey.com/s/calgarydollars2012intake">Intake Survey</a></li>
+								<li><strong>We'll mail you 20 C$</strong></li>
+							</ul>
+
+							<p><em>Don't worry we'll remind you of the steps to earn 20 C$ in an email after you fill out the form below</em></p>
 						</td>
 						<td class="spacer"></td>
 						<td>
@@ -78,29 +86,7 @@
 						</td>
 					</tr>
 				</table>
-				
-				<div id="join-steps" class="register-box">
-					
-					<p><strong>First:</strong> Create an account below</p>
-					
-					<ul>
-						<li>Watch the overview video below</li>
-						<li>Fill out the form below</li>
-						<li>Activate your account via email</li>						
-					</ul>
-					
-					<p><strong>Next:</strong> Follow the email instructions and we'll send you 20 C$ (Calgary Dollars) for free!</p>
-					
-					<ul>
-						<li>Post a Listing on this site</li>
-						<li>Fill out an <a href="http://www.surveymonkey.com/s/calgarydollars2012intake">Intake Survey</a></li>
-						<li><strong>We'll mail you 20 C$</strong></li>
-					</ul>
-					
-					<p><em>Don't worry we'll remind you of the steps to earn 20 C$ in an email after you fill out the form below</em></p>
-					
-				</div>
-				
+								
 				<div class="register-box">
 				<h2>Overview Video</h2>
 				<object width="640" height="360"><param name="movie" value="http://www.youtube.com/v/JpqaXgSv7dk&hl=en_US&feature=player_embedded&version=3"></param><param name="allowFullScreen" value="true"></param><param name="allowScriptAccess" value="always"></param><embed src="http://www.youtube.com/v/JpqaXgSv7dk&hl=en_US&feature=player_embedded&version=3" type="application/x-shockwave-flash" allowfullscreen="true" allowScriptAccess="always" width="640" height="360"></embed></object>
