@@ -23,7 +23,7 @@
 <div class="container">
 <!-- header -->
 <div id="header">
-    <a id="logo" href="<?php echo osc_base_url(); ?>"><img src="<?php echo osc_current_web_theme_url(); ?>/images/calgary-dollars-heading.jpg" width="650px" height="80px" alt="Calgary Dollars - Circulating New Ideas About Money"></a>
+    <a id="logo" href="<?php echo osc_base_url(); ?>"><img src="<?php echo osc_current_web_theme_url(); ?>/images/calgary-dollars-heading.png" width="377px" height="80px" alt="Calgary Dollars - Circulating New Ideas About Money"></a>
     <div id="user_menu">
         <ul>
             <?php if(osc_users_enabled()) { ?>
