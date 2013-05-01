@@ -115,6 +115,7 @@
 		                        <label for="price"><?php _e('Price', 'modern'); ?></label>
 		                        <?php ItemForm::price_input_text(); ?>
 		                        <?php ItemForm::currency_select(); ?>
+								Dollar amounts only, for hourly rates please leave blank and list in description
 								<?php ItemForm::plugin_edit_item(); ?>
 		                    </div>
                            <?php } ?>
