@@ -55,7 +55,7 @@
         <div class="content item">
             <div id="item_head">
                 <div class="inner">
-                    <h1><?php echo osc_item_title() . ' ' . osc_item_city(); ?></h1>
+                    <h1><?php echo osc_item_title(); ?></h1>
                     <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
                         <p id="edit_item_view">
                             <strong>

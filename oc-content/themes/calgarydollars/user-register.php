@@ -37,7 +37,7 @@
 				$("#s_name").rules("add", {required: true, minlength: 5, messages: { required: "First and Last Name: this field is required" }});
 				$("#countryId").rules("add", {required: true, messages: { required: "Country: this field is required" }});
 		        $("#regionId").rules("add", {required: true, messages: { required: "Province: this field is required" }});
-		        $("#cityId").rules("add", {required: true, messages: { required: "City: This field is required" }});
+		        $("#city").rules("add", {required: true, messages: { required: "City: This field is required" }});
 				$("#address").rules("add", {required: true, messages: { required: "Address: this field is required" }});
 				$("#cityArea").rules("add", {required: true, minlength: 5, messages: { required: "Zip Code: this field is required" }});
 				$("#s_phone_land").rules("add", {required: true, minLength: 7, messages: { required: "Phone Number: this field is required" }});
